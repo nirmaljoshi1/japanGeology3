@@ -204,7 +204,7 @@ class japanGeology3:
 # #get geology data
 #get elevation data
 def get_elevation(lat,lon):
-    URL = "http://cyberjapandata2.gsi.go.jp/general/dem/scripts/getelevation.php?lon=" + str(lon) + "&lat=" + str(lat) +"&outtype=JSON"
+    URL = "https://cyberjapandata2.gsi.go.jp/general/dem/scripts/getelevation.php?lon=" + str(lon) + "&lat=" + str(lat) +"&outtype=JSON"
     data_all = urllib.request.urlopen(URL)
     data = json.loads(data_all.read())
     elevationall = str(data['elevation'])+ u' m'
